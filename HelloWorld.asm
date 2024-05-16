@@ -1,3 +1,7 @@
+; Print "Hello, World!" to stdout in assembly
+; My first assembly program!
+; Program size: 2.5 KB
+
 .386
 .model flat,stdcall
 .stack 4096
@@ -12,7 +16,7 @@ includelib C:\masm32\lib\user32.lib
 STD_OUTPUT_HANDLE EQU -11 ; stdout
 
 .data
-    message db "Hello World",13,10 ; 13 - CR, 10 - LF
+    message db "Hello, World!",13,10 ; 13 - CR, 10 - LF
     msg_size equ $ - offset message ; size of message in bytes
 .data?
 
